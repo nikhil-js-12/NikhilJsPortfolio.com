@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #080808;
+    color: #fff; 
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 250px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 2%;
+}
+.header-text h1 span{
+    color:#ffa8aa
+}
+.header-text h1 .highlight {
+    color: #cfb991;
+}
+/* -----------about me-------------- */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 16px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Updated Styles for Show More / Show Less Buttons */
+button {
+    display: block;
+    margin: 20px auto;
+    margin-top: 35px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #ff004f; /* Same border styling as other buttons */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ff004f; /* Same hover background color as other buttons */
+    color: #fff; /* Ensure the text color remains visible */
+}
+
+/* Styles for Hidden Additional Skills Section */
+#additional-skills {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Improved Spacing for List Items */
+.tab-contents ul {
+    padding: 0;
+    margin: 10px 0;
+}
+
+.tab-contents ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.tab-contents ul li::before {
+    content: "●";
+    color: #ff004f;
+    margin-right: 8px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* -----------projects--------------*/
+#projects{
+    padding: 30px 0;
+}
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projects-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.projects-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.projects-list div i h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.projects-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.projects-list div:hover{
+    background: #b54769;
+    transform: translateY(-10px);
+
+}
+/* -----------part 2--------------*/
+.projects-list2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projects-list2 div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.projects-list2 div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.projects-list2 div i h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.projects-list2 div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.projects-list2 div:hover{
+    background: #b54769;
+    transform: translateY(-10px);
+
+}
+/* -----------part 3--------------*/
+.projects-list3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projects-list3 div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.projects-list3 div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.projects-list3 div i h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.projects-list3 div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.projects-list3 div:hover{
+    background: #b54769;
+    transform: translateY(-10px);
+
+}
+
+/* Work Section */
+/* -----------Portfolio-------------- */
+#portfolio {
+    padding: 30px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.work-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.work-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.work-list div p {
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.work-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.work-list div:hover {
+    background: #b54769;
+    transform: translateY(-10px);
+}
+
+/* Expanded details styling for Portfolio */
+.work-details {
+    background: #1c1c1c;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.work-details h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff004f;
+    margin-bottom: 15px;
+}
+
+.work-details h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.work-details ul {
+    padding-left: 20px;
+}
+
+.work-details ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+.learn-more-btn, .close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #262626;
+    color: #fff;
+    border: 1px solid #ff004f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover, .close-btn:hover {
+    background-color: #ff004f;
+    color: #fff;
+}
+
+/* See More button styling for Portfolio Section */
+.see-more-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#portfolio-see-more-btn,
+#portfolio-show-less-btn {
+    display: inline-block;
+    margin: 10px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+#portfolio-see-more-btn:hover,
+#portfolio-show-less-btn:hover {
+    background: #ff004f;
+    color: #fff;
+}
+
+/* Responsive Design for Portfolio */
+@media (max-width: 768px) {
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* See More button styling for Portfolio Section */
+.see-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#experience-see-more-btn {
+    display: inline-block;
+    margin: 10px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+#experience-see-more-btn:hover {
+    background: #ff004f;
+    color: #fff;
+}
+
+
+
+
+/* -----------contact-------------- */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s, color 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+/* General button styling */
+.btn {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 60px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* Download CV Button Styling */
+.btn.download-cv {
+    display: inline-block; /* Ensures the button size wraps its content */
+    background: #ff004f;
+    border: 1px solid #ff004f;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px; /* Adjusted padding for better fit */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.5s, color 0.3s;
+    text-align: center;
+    margin-top: 20px; /* Adds spacing below the button */
+}
+
+/* Hover Effect for Download CV Button */
+.btn.download-cv:hover {
+    background: #262626;
+    color: #ff004f;
+    border-color: #ff004f;
+}
+
+/* Submit Button Styling */
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #ff004f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form .btn2:hover {
+    background: #b54769;
+    transform: translateY(-5px);
+}
+
+/* Input Fields Styling */
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #b54769;
+}
+
+
+/* -----------screen orientations----------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%; 
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 15px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+/* -----------Newly added----------*/
+/* See More button styling for Projects Section*/
+.see-more-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#projects-see-more-btn,
+#projects-show-less-btn {
+    display: inline-block;
+    margin: 10px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+#projects-see-more-btn:hover,
+#projects-show-less-btn:hover {
+    background: #ff004f;
+    color: #fff;
+}
+
+/* -----------New CSS for Learn More, Close Buttons, and View Publication------------- */
+
+.project-details {
+    background: #1c1c1c;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center; /* Ensures proper alignment for all content */
+}
+
+.project-details h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff004f;
+    margin-bottom: 15px;
+}
+
+.project-details h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-details ul {
+    padding-left: 20px;
+}
+
+.project-details ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+}
+
+/* Updated Close Button Styling */
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #262626;
+    color: #fff;
+    border: 1px solid #ff004f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px; /* Updated size for consistency */
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background-color: #ff004f;
+    color: #fff;
+}
+
+/* Styling for View Publication Link */
+.view-publication-link {
+    display: inline-block;
+    font-size: 16px; /* Matches the Close button's size */
+    font-weight: bold;
+    color: #ff004f;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.view-publication-link:hover {
+    color: #fff; /* Changes to white on hover */
+}
+
+/* Alignment for Buttons and Links */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking of buttons and links */
+    align-items: center;
+    gap: 15px; /* Adds spacing between View Publication and Close */
+    margin-top: 20px; /* Consistent spacing */
+}

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Js Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c22c4533a3.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#work">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    
+                </nav>
+                <div class="header-text">
+                    <p>Full Stack Developer</p>
+                    <h1>Hi, I'm <span>Nikhil Js</span> 
+                        <br>From <span class="highlight">Purdue University</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+<!--------------------about me----------------->        
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg" alt="User Image">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Hi, I’m Nikhil Prakash J.S., a Master’s student in Computer Science at Purdue University,
+                    specializing in Cybersecurity. I enjoy working on front-end development and creating user-friendly
+                    designs while solving complex problems. With experience in cybersecurity and AI-powered systems, I’m
+                    passionate about building innovative solutions that make a meaningful impact and improve user
+                    experiences.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="tab-contents active-tab" id="skills">
+                    <h3>Technical Skills</h3>
+                    <ul id="technical-skills">
+                        <li><strong>Programming Languages:</strong> Python, JavaScript, Java, React, C++, Node.js, SQL.</li>
+                        <li><strong>Web Development:</strong>
+                            <ul>
+                                <li>Front-End: React, HTML, CSS, JavaScript.</li>
+                                <li>Back-End: Node.js, Firebase.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Cybersecurity:</strong>
+                            <ul>
+                                <li>Network Security: CAN Bus Analysis, Intrusion Detection, Encryption (AES, HMAC).</li>
+                                <li>Tools: Ghidra, Wireshark, OpenSSL, Gcrypt, KnowBe4.</li>
+                                <li>Security Practices: Phishing campaign management, secure file encryption/decryption.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Show More Button -->
+                    <button id="show-more-btn" onclick="toggleSkills(true)">Show More</button>
+
+                    <!-- Additional Skills Section (Initially Hidden) -->
+                    <div id="additional-skills" style="display: none;">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li><strong>Team Collaboration:</strong> Cross-functional teamwork with designers, managers, and cybersecurity professionals.</li>
+                            <li><strong>Mentorship and Training:</strong> Conducting webinars and mentoring sessions for app development.</li>
+                            <li><strong>Problem-Solving:</strong> Identifying vulnerabilities in systems and implementing mitigation strategies.</li>
+                            <li><strong>Communication:</strong> Creating educational content (newsletters, articles, and presentations).</li>
+                            <li><strong>Project Management:</strong> Planning campaigns, tracking project timelines, and ensuring deliverables.</li>
+                        </ul>
+
+                        <h3>Domain-Specific Skills</h3>
+                        <ul>
+                            <li><strong>Cybersecurity Awareness:</strong> Promoting best practices and running educational campaigns.</li>
+                            <li><strong>Heavy Vehicle Security:</strong> CAN bus analysis, vulnerability exploitation, and mitigation in automotive systems.</li>
+                            <li><strong>Full-Stack Development:</strong> Building scalable and responsive applications.</li>
+                        </ul>
+
+                        <!-- Show Less Button -->
+                        <button id="show-less-btn" onclick="toggleSkills(false)">Show Less</button>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Purdue Systems Security</span><br>Currently working since October 2024 as a <span>Web Developer and Cybersecurity Awareness Associate</span>. Focuses on promoting <br>cybersecurity best practices, planning awareness campaigns, and developing web interfaces for cybersecurity tools.</li>
+                        <li><span>Cynernaut Edu Tech</span><br>Worked from February 2020 to August 2020 as a <span>Full Stack Application Developer</span>. Enhanced the user experience for ed-tech <br>platforms by developing responsive front-end and scalable back-end systems using modern technologies.</li>
+                        <li><span>CyberTruck Challenge</span><br>Participated in June 2024 as part of a cybersecurity challenge. Collaborated with experts to analyze CAN bus systems, <br>identify vulnerabilities, and implement solutions for heavy vehicle cybersecurity.</li>
+                    </ul>
+                </div>
+
+                <!-- Education Section -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Aug 2023 - May 2025</span><br>Master of Science in Computer Science<br><span>Purdue University</span>, West Lafayette, IN, USA</li>
+                        <li><span>July 2019 - May 2023</span><br>Bachelor of Technology in Computer Science and Engineering<br><span>SRM Institute of Science and Technology</span>, Chennai, TN, India</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------Projects----------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <!-- First row of projects -->
+
+             <!-- Career Path Exploration Bot Project -->
+             <div id="career-path-bot">
+                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                <h2>Career Path Exploration Bot</h2>
+                <p>Developed a bot to guide students in exploring diverse career paths with recommendations for courses, categorized as free or paid. Focused on breaking traditional fields like Engineering or Medicine. Technology stack included Yellow Messenger API and Python.</p>
+                <a id="career-path-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('career-path-details')">Learn More</a>
+            </div>
+            <!-- Expanded Details for Career Path Exploration Bot -->
+            <div id="career-path-details" class="project-details" style="display: none;">
+                <h3>Liason – Career Path Exploration Bot</h3>
+                <p>The Career Path Exploration Bot, named "Liason," was designed to revolutionize how students approach their career decisions. The primary goal was to provide an interactive and user-friendly platform to explore diverse career options beyond traditional fields like Engineering and Medicine. This bot utilized the <strong>Yellow Messenger API</strong> as its core conversational framework and was programmed using <strong>Python</strong> for enhanced functionality.</p>
+                <h4>Key Features and Functionality:</h4>
+                <ul>
+                    <li><strong>Personalized Recommendations:</strong> The bot curated career paths based on user preferences, skillsets, and interests.</li>
+                    <li><strong>Course Suggestions:</strong> It provided course recommendations, categorized into free and paid options, ensuring accessibility for students of all backgrounds.</li>
+                    <li><strong>Interactive Interface:</strong> A dynamic and engaging interface allowed students to interact naturally and receive real-time feedback.</li>
+                </ul>
+                <h4>Development Process:</h4>
+                <ul>
+                    <li><strong>Technology Stack:</strong>
+                        <ul>
+                            <li>Yellow Messenger API: Enabled smooth chatbot interactions and real-time responses.</li>
+                            <li>Python: Used for programming the backend logic, data handling, and ensuring bot efficiency.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Implementation:</strong>
+                        <ul>
+                            <li>Designed conversation flows to guide users through career exploration.</li>
+                            <li>Integrated a database to store and retrieve information about diverse career paths and courses.</li>
+                            <li>Enhanced the bot’s natural language understanding to improve response accuracy.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Impact and Outcome:</h4>
+                <p>This bot proved instrumental in expanding students' awareness of unconventional career opportunities. It empowered users to make informed decisions by providing easy access to curated information about various fields. With its emphasis on personalization and ease of use, the bot received positive feedback from both students and educators.</p>
+                <button id="career-path-close" class="close-btn" onclick="toggleDetails('career-path-details')">Close</button>
+            </div>
+
+            <!-- 2nd Project -->
+
+            <div id="hospital-bed-app">
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>Hospital Bed Availability App</h2>
+                <p>The SWELP project was developed to assist hospitals, healthcare providers, and patients by providing real-time updates on hospital bed availability. Leveraging technology, SWELP improved resource allocation and patient care during the COVID-19 crisis.</p>
+                <a id="hospital-bed-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('hospital-bed-details')">Learn More</a>
+            </div>
+            <div id="hospital-bed-details" class="project-details" style="display: none;">
+                <h3>SWELP – Hospital Bed Availability App</h3>
+                <p>The SWELP project was developed as a timely response to the challenges posed during the COVID-19 pandemic. This mobile application aimed to assist hospitals, healthcare providers, and patients by providing real-time updates on hospital bed availability.</p>
+                <h4>Key Features and Functionality:</h4>
+                <ul>
+                    <li><strong>Real-Time Monitoring:</strong> Up-to-date information on available hospital beds, including ICU beds and ventilator support.</li>
+                    <li><strong>Patient Transportation Support:</strong> Features to arrange transportation to hospitals with available beds.</li>
+                    <li><strong>User-Friendly Interface:</strong> Ensured quick access to critical information.</li>
+                </ul>
+                <h4>Development Process:</h4>
+                <ul>
+                    <li><strong>Android Studio:</strong> Built the mobile app with an efficient user interface.</li>
+                    <li><strong>Firebase:</strong> Backend for storing and managing real-time hospital bed data.</li>
+                    <li><strong>Google Maps API:</strong> Integrated transportation and navigation features.</li>
+                </ul>
+                <p>SWELP significantly reduced delays in finding hospital beds and arranging patient transportation during emergencies.</p>
+                <a href="https://devpost.com/software/swelp" target="_blank" class="view-publication-link">See More</a>
+                <button id="hospital-bed-close" class="close-btn" onclick="toggleDetails('hospital-bed-details')">Close</button>
+            </div>
+
+            <!-- 3rd Project -->
+            
+            <div id="online-donation-platform">
+                <i class="fa-solid fa-globe"></i>
+                <h2>Online Donation Platform</h2>
+                <p>LifeWay is an online donation platform designed to bridge the gap between donors and trusted organizations. It ensured secure and direct financial transactions while eliminating third-party fees, enhancing trust and efficiency.</p>
+                <a id="online-donation-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('online-donation-details')">Learn More</a>
+            </div>
+            <div id="online-donation-details" class="project-details" style="display: none;">
+                <h3>LifeWay – Online Donation Platform</h3>
+                <p>LifeWay is an online donation platform developed to bridge the gap between donors and trusted organizations during the COVID-19 pandemic. The platform ensured secure and direct financial transactions, removing the need for third-party intermediaries.</p>
+                <h4>Key Features and Functionality:</h4>
+                <ul>
+                    <li><strong>Direct Donations:</strong> Connected donors directly with organizations.</li>
+                    <li><strong>Secure Transactions:</strong> Safeguarded donor information and financial details.</li>
+                    <li><strong>User-Friendly Interface:</strong> Simplified the donation process with an intuitive design.</li>
+                </ul>
+                <h4>Development Process:</h4>
+                <ul>
+                    <li><strong>React:</strong> Built a responsive and dynamic front-end interface.</li>
+                    <li><strong>Node.js:</strong> Powered the backend for managing server-side logic.</li>
+                    <li><strong>MongoDB:</strong> Stored donor, recipient, and transaction information securely.</li>
+                </ul>
+                <p>LifeWay increased the efficiency of the donation process while strengthening trust between donors and organizations.</p>
+                <button id="online-donation-close" class="close-btn" onclick="toggleDetails('online-donation-details')">Close</button>
+            </div>
+
+            <!-- 4th Project -->
+            
+            <div id="vehicle-detection-system">
+                <i class="fa-solid fa-camera"></i>
+                <h2>Vehicle Detection System</h2>
+                <p>Developed a vehicle detection system using Raspberry Pi and Computer Vision to enhance traffic monitoring and security. The system identifies vehicle attributes like type, color, and model in real-time.</p>
+                <a id="vehicle-detection-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('vehicle-detection-details')">Learn More</a>
+            </div>
+            <div id="vehicle-detection-details" class="project-details" style="display: none;">
+                <h3>Vehicle Detection System for Security Purposes</h3>
+                <p>This project developed a system to enhance traffic monitoring and security applications by implementing a vehicle detection system. Using Raspberry Pi and Computer Vision, the system identifies various vehicle attributes in real-time.</p>
+                <h4>Key Features and Functionality:</h4>
+                <ul>
+                    <li><strong>Real-Time Detection:</strong> Identifies vehicles using video feed or camera inputs.</li>
+                    <li><strong>Attribute Recognition:</strong> Classifies vehicle types (e.g., car, truck, bike), colors, and models.</li>
+                    <li><strong>Security and Traffic Analysis:</strong> Monitors traffic speed and analyzes traffic flow.</li>
+                </ul>
+                <h4>Development Process:</h4>
+                <ul>
+                    <li><strong>Raspberry Pi:</strong> Used for hardware implementation.</li>
+                    <li><strong>Python:</strong> Backend software integrating OpenCV for real-time image and video processing.</li>
+                    <li><strong>Computer Vision:</strong> Enabled vehicle detection and recognition.</li>
+                </ul>
+                <p>The system provides accurate and reliable data for traffic monitoring and security enhancement.</p>
+                <button id="vehicle-detection-close" class="close-btn" onclick="toggleDetails('vehicle-detection-details')">Close</button>
+            </div>
+        </div>
+
+        <!-- Hidden rows -->
+        <div id="extra-projects" style="display: none;">
+            <div class="projects-list2">
+                <!-- Second row of projects -->
+
+                <!-- 5th Project -->
+                <div id="smart-mirror">
+                    <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                    <h2>Smart Mirror</h2>
+                    <p>The AI-powered smart mirror was developed as a multi-functional personal assistant for daily tasks, integrating artificial intelligence into a cost-effective hardware solution to enhance the user experience.</p>
+                    <a id="smart-mirror-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('smart-mirror-details')">Learn More</a>
+                </div>
+                <div id="smart-mirror-details" class="project-details" style="display: none;">
+                    <h3>AI-Powered Personal Assistant Using Smart Mirror</h3>
+                    <p>The AI-powered smart mirror was developed as a multi-functional personal assistant for daily tasks. This project focused on integrating artificial intelligence into a cost-effective hardware solution to provide users with a futuristic, hands-free interaction platform.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>Daily Scheduling and Reminders:</strong> Displayed schedules, reminders, and to-do lists to help users stay organized.</li>
+                        <li><strong>Live Workout Guides:</strong> Offered exercise suggestions and visual demonstrations to promote health and fitness.</li>
+                        <li><strong>Health and Outfit Suggestions:</strong> Used weather updates and user preferences to recommend clothing and other tips.</li>
+                        <li><strong>Interactive Interface:</strong> Supported voice commands and touch interactions for seamless navigation.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>Raspberry Pi:</strong> Served as the central processing unit for running the AI algorithms and managing display output.</li>
+                        <li><strong>Python:</strong> Enabled back-end programming, integrating various APIs for weather, scheduling, and health-related insights.</li>
+                        <li><strong>Smart Mirror Technology:</strong> Leveraged one-way mirror glass for displaying information while retaining reflective properties.</li>
+                    </ul>
+                    <h4>Implementation:</h4>
+                    <ul>
+                        <li>Built a responsive UI that displayed relevant information such as weather, news, and time.</li>
+                        <li>Integrated AI models to provide recommendations based on user behavior and preferences.</li>
+                        <li>Developed real-time workout guides with visual demonstrations for fitness routines.</li>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>The AI Smart Mirror Assistant demonstrated how affordable hardware could be combined with advanced AI technologies to deliver practical and innovative solutions. It was praised for its multi-functional capabilities and potential applications in homes, gyms, and workplaces. The smart mirror not only enhanced convenience but also promoted a healthier and more productive lifestyle.</p>
+                    <button id="smart-mirror-close" class="close-btn" onclick="toggleDetails('smart-mirror-details')">Close</button>
+                </div>                        
+
+                <!-- 6th Project -->
+                <div id="drowsiness-detection">
+                    <i class="fa-solid fa-camera"></i>
+                    <h2>Drowsiness Detection System</h2>
+                    <p>This project aimed to address the critical issue of road accidents caused by driver fatigue. By utilizing real-time image processing and behavioral analysis, the system detected signs of drowsiness and alerted the driver, potentially saving lives.</p>
+                    <a id="drowsiness-detection-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('drowsiness-detection-details')">Learn More</a>
+                </div>
+                <div id="drowsiness-detection-details" class="project-details" style="display: none;">
+                    <h3>Drowsiness Detection System for Driver Safety</h3>
+                    <p>This project tackled the critical issue of road accidents caused by driver fatigue by employing real-time image processing and behavioral analysis. The system detected early signs of drowsiness through facial feature tracking and head movement analysis, triggering alerts to prevent potential accidents.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>Real-Time Monitoring:</strong> Continuously monitored driver facial features, including eye closure duration, blink rate, and head position.</li>
+                        <li><strong>Drowsiness Detection Algorithm:</strong> Leveraged threshold-based and machine learning models to identify fatigue indicators.</li>
+                        <li><strong>Instant Alerts:</strong> Triggered visual, auditory, or haptic feedback to wake the driver upon detecting signs of drowsiness.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>OpenCV:</strong> Facilitated real-time tracking of facial landmarks and feature extraction for drowsiness detection.</li>
+                        <li><strong>Machine Learning Models:</strong> Trained on diverse datasets to classify drowsiness patterns with high accuracy.</li>
+                        <li><strong>Python:</strong> Provided the backend logic for image processing, data analysis, and system integration.</li>
+                    </ul>
+                    <h4>Implementation:</h4>
+                    <ul>
+                        <li>Built a detection pipeline using OpenCV to analyze Eye Aspect Ratio (EAR) and head movement patterns.</li>
+                        <li>Enhanced detection accuracy under varying conditions like poor lighting or different facial orientations.</li>
+                        <li>Created a hardware prototype to test the system in simulated and real-world driving scenarios.</li>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>The Drowsiness Detection System significantly contributed to road safety by offering an effective solution to detect and prevent driver fatigue. Recognized for its innovation and cost-effectiveness, the system demonstrated the potential to save lives and reduce road accidents, making it a practical tool for the transportation industry.</p>
+                    <a href="https://restpublisher.com/articlejame/10-46632-jame-2-2-4/" target="_blank" class="view-publication-link">View Publication</a>
+                    <button id="drowsiness-detection-close" class="close-btn" onclick="toggleDetails('drowsiness-detection-details')">Close</button>
+                </div>
+                               
+                <!-- 7th Project -->
+                <div id="padding-oracle">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Padding Oracle Attack Simulation</h2>
+                    <p>This project focused on simulating a Padding Oracle Attack to exploit vulnerabilities in CBC-mode encryption, demonstrating how insecure padding in cryptographic protocols could be leveraged to decrypt sensitive data.</p>
+                    <a id="padding-oracle-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('padding-oracle-details')">Learn More</a>
+                </div>
+                <div id="padding-oracle-details" class="project-details" style="display: none;">
+                    <h3>Padding Oracle Attack Simulation</h3>
+                    <p>This project focused on simulating a Padding Oracle Attack to exploit vulnerabilities in CBC-mode encryption. The attack demonstrated how insecure padding in cryptographic protocols could be leveraged to decrypt sensitive data without access to the encryption key.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>Ciphertext Decryption:</strong> Successfully decrypted encrypted messages by manipulating ciphertext blocks and analyzing server responses.</li>
+                        <li><strong>Risk Demonstration:</strong> Highlighted the dangers of insecure padding mechanisms in real-world encryption protocols.</li>
+                        <li><strong>Python Implementation:</strong> Scripts automated the attack process, demonstrating the practical feasibility of such exploits.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>Python:</strong> Utilized for scripting the attack logic, handling encryption and decryption processes, and simulating server responses.</li>
+                        <li><strong>Cryptography Concepts:</strong> Applied cryptographic principles like CBC-mode encryption and padding schemes to identify vulnerabilities.</li>
+                    </ul>
+                    <h4>Implementation:</h4>
+                    <ul>
+                        <li>Crafted malicious ciphertexts and sent them to a simulated server to observe oracle responses.</li>
+                        <li>Iteratively adjusted ciphertexts based on server feedback to reconstruct the original plaintext.</li>
+                        <li>Documented the process to provide a clear understanding of how padding oracle attacks operate and their implications.</li>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>The simulation highlighted the importance of adopting secure cryptographic practices, such as avoiding predictable padding schemes or implementing robust defenses like authenticated encryption. It provided valuable insights for developers and security professionals, demonstrating the critical need for secure encryption design. The project reinforced the significance of using modern encryption protocols like AES-GCM to mitigate such vulnerabilities.</p>
+                    <button id="padding-oracle-close" class="close-btn" onclick="toggleDetails('padding-oracle-details')">Close</button>
+                </div>
+                               
+                <!-- 8th Project -->
+                <div id="dns-cache-poisoning">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Kaminsky DNS Cache Poisoning</h2>
+                    <p>This project focused on the Kaminsky DNS Cache Poisoning Attack, exploiting DNS protocol vulnerabilities to manipulate cached records and redirect users to fraudulent websites.</p>
+                    <a id="dns-cache-poisoning-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('dns-cache-poisoning-details')">Learn More</a>
+                </div>
+                <div id="dns-cache-poisoning-details" class="project-details" style="display: none;">
+                    <h3>Kaminsky DNS Cache Poisoning</h3>
+                    <p>This project focused on the Kaminsky DNS Cache Poisoning Attack, which exploits vulnerabilities in the DNS protocol to manipulate cached records. By demonstrating how malicious entities can redirect users to fraudulent websites, the project emphasized the need for securing DNS infrastructures through modern solutions like DNSSEC.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>DNS Spoofing Demonstration:</strong> Successfully poisoned DNS caches to redirect legitimate traffic to malicious sites.</li>
+                        <li><strong>Protocol Analysis:</strong> Highlighted inherent flaws in DNS, such as the lack of authentication in traditional systems.</li>
+                        <li><strong>Security Advocacy:</strong> Showcased DNSSEC as a robust solution for mitigating cache poisoning attacks.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>DNS Configuration Tools:</strong> Configured DNS servers to set up the attack environment.</li>
+                        <li><strong>Networking Knowledge:</strong> Applied concepts like TTL (Time-to-Live), resolver behavior, and cache overwriting techniques.</li>
+                    </ul>
+                    <h4>Implementation:</h4>
+                    <ul>
+                        <li>Deployed a controlled DNS server environment to simulate the attack without real-world harm.</li>
+                        <li>Crafted spoofed DNS responses to overwrite legitimate entries in the cache.</li>
+                        <li>Analyzed traffic redirection and documented the risks associated with insecure DNS configurations.</li>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>This project demonstrated how attackers could exploit the lack of validation in DNS responses, leading to severe consequences like phishing attacks, data theft, and service disruptions. By highlighting the vulnerabilities in traditional DNS, it reinforced the need for widespread adoption of DNSSEC to ensure data authenticity and integrity. The project served as an educational tool for security professionals, enabling better defense strategies against DNS attacks.</p>
+                    <button id="dns-cache-poisoning-close" class="close-btn" onclick="toggleDetails('dns-cache-poisoning-details')">Close</button>
+                </div>
+                             
+            </div>
+            <div class="projects-list3">
+                <!-- Third row of projects -->
+
+                <!-- 9th Project -->
+                <div id="ssl-tunnel">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>SSL Tunnel with OpenSSL</h2>
+                    <p>This project involved setting up a secure communication tunnel between hosts using OpenSSL, ensuring encrypted and protected data transmission against interception and unauthorized access.</p>
+                    <a id="ssl-tunnel-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('ssl-tunnel-details')">Learn More</a>
+                </div>
+                <div id="ssl-tunnel-details" class="project-details" style="display: none;">
+                    <h3>SSL Tunnel with OpenSSL</h3>
+                    <p>This project focused on setting up a secure communication tunnel between hosts using OpenSSL, ensuring that sensitive data was encrypted and protected during transmission. The primary focus was on implementing AES-CBC encryption to safeguard network traffic against interception and unauthorized access.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>Encryption of Network Traffic:</strong> Utilized AES-CBC mode to ensure that all transmitted data was encrypted, preventing unauthorized access.</li>
+                        <li><strong>Secure Key Exchange:</strong> Implemented SSL/TLS protocols to establish a secure handshake between communicating parties.</li>
+                        <li><strong>Data Integrity Assurance:</strong> Verified that transmitted data was not tampered with during transit.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>OpenSSL:</strong> Used to generate certificates, keys, and configure the SSL tunnel.</li>
+                        <li><strong>AES-CBC Encryption:</strong> Ensured robust data encryption with minimal computational overhead.</li>
+                    </ul>
+                    <h4>Implementation:</h4>
+                    <ul>
+                        <li>Configured SSL certificates and keys to authenticate connections.</li>
+                        <li>Established a secure communication channel between a client and server using the OpenSSL library.</li>
+                        <li>Tested the tunnel’s integrity and security using simulated data transmission scenarios.</li>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>This project successfully highlighted the importance of securing network communications, particularly in scenarios involving sensitive data exchange. The implementation showcased how SSL/TLS protocols can protect against man-in-the-middle attacks and eavesdropping. It also demonstrated the practical application of OpenSSL in building secure systems, making it a valuable learning experience for future applications in network security.</p>
+                    <button id="ssl-tunnel-close" class="close-btn" onclick="toggleDetails('ssl-tunnel-details')">Close</button>
+                </div>                
+
+                <!-- 10th Project -->
+                <div id="dynamic-load-balancing">
+                    <i class="fa-solid fa-bars-progress"></i>
+                    <h2>Dynamic Load Balancing</h2>
+                    <p>This project focused on implementing a heuristic dynamic load-balancing algorithm for SDN-based data centers to optimize network performance and reduce congestion, packet loss, and latency.</p>
+                    <a id="dynamic-load-balancing-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('dynamic-load-balancing-details')">Learn More</a>
+                </div>
+                <div id="dynamic-load-balancing-details" class="project-details" style="display: none;">
+                    <h3>Dynamic Load Balancing in SDN-Based Data Center Networks</h3>
+                    <p>This project focused on implementing a heuristic dynamic load-balancing algorithm for Software-Defined Networking (SDN)-based data centers. The algorithm dynamically monitored and redistributed traffic flows to optimize network performance. It addressed key issues like congestion, packet loss, and latency in high-traffic environments, making it a robust solution for modern data center challenges.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>Traffic Monitoring:</strong> Collected real-time traffic data to identify congested network paths.</li>
+                        <li><strong>Dynamic Redistribution:</strong> Redistributed network flows dynamically to balance loads across available paths.</li>
+                        <li><strong>Performance Metrics:</strong> Improved throughput, reduced latency, and minimized packet loss.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>Technology Stack:</strong></li>
+                        <ul>
+                            <li><strong>Mininet:</strong> Simulated the data center network for testing and validation of the algorithm.</li>
+                            <li><strong>Floodlight:</strong> Used as the SDN controller to manage and monitor network flow rules.</li>
+                        </ul>
+                        <li><strong>Implementation:</strong></li>
+                        <ul>
+                            <li>Designed and implemented the heuristic algorithm to balance traffic across multiple paths dynamically.</li>
+                            <li>Integrated the algorithm with Floodlight to automate the flow adjustments in response to real-time traffic conditions.</li>
+                            <li>Evaluated the system using Mininet by simulating different traffic scenarios and measuring performance metrics.</li>
+                        </ul>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>The project demonstrated significant improvements in network performance by optimizing resource utilization and reducing congestion. It validated the efficacy of the load-balancing algorithm through extensive simulations, achieving measurable gains in throughput and latency reduction. This work contributed to advancing SDN-based data center network management, making it a valuable asset for scalable and efficient infrastructure design.</p>
+                    <a href="https://github.com/ramasamy-t/SDN-DCN-Load-Balancing" target="_blank" class="view-publication-link">View Repository</a>
+                    <button id="dynamic-load-balancing-close" class="close-btn" onclick="toggleDetails('dynamic-load-balancing-details')">Close</button>
+                </div>                
+
+                <!-- 11th Project -->
+                <div id="security-copy-utility">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Security Copy Utility</h2>
+                    <p>This project involved designing a reliable tool for file encryption and decryption using AES encryption and the Gcrypt library, ensuring data confidentiality and integrity during transmission.</p>
+                    <a id="security-copy-utility-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('security-copy-utility-details')">Learn More</a>
+                </div>
+                <div id="security-copy-utility-details" class="project-details" style="display: none;">
+                    <h3>Security Copy Utility</h3>
+                    <p>The Security Copy Utility was designed to provide a reliable and secure solution for file encryption and decryption. Using the AES encryption standard and the Gcrypt library, this tool ensured the confidentiality and integrity of data during transmission. The project catered to scenarios where secure file sharing was critical, particularly in enterprise environments.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>AES Encryption:</strong> Implemented advanced encryption standards to safeguard sensitive data.</li>
+                        <li><strong>File Integrity Assurance:</strong> Used hashing techniques to verify the integrity of transmitted files.</li>
+                        <li><strong>Cross-Platform Compatibility:</strong> Designed to work seamlessly across multiple operating systems.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>Technology Stack:</strong></li>
+                        <ul>
+                            <li><strong>Gcrypt Library:</strong> Utilized for cryptographic operations, including key generation and AES encryption.</li>
+                            <li><strong>Python/C:</strong> Developed the utility with efficient handling of encryption and decryption operations.</li>
+                        </ul>
+                        <li><strong>Implementation:</strong></li>
+                        <ul>
+                            <li>Built functions to encrypt files using AES and generate secure keys.</li>
+                            <li>Implemented HMAC (Hash-based Message Authentication Code) for verifying data integrity.</li>
+                            <li>Designed a command-line interface to simplify file encryption and decryption for end-users.</li>
+                        </ul>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>The Security Copy Utility provided a practical solution for safeguarding sensitive data. Its robust encryption and integrity verification features made it a valuable tool for secure file sharing, particularly in cybersecurity-sensitive environments. The project demonstrated real-world applications of cryptography and secure software design principles.</p>
+                    <button id="security-copy-utility-close" class="close-btn" onclick="toggleDetails('security-copy-utility-details')">Close</button>
+                </div>                
+
+                <!-- 12th Project -->
+                <div id="nft-simplification">
+                    <i class="fa-solid fa-square-binary"></i>
+                    <h2>NFT's Using RNN Algorithm</h2>
+                    <p>This project leveraged Recurrent Neural Networks (RNN) to simplify NFT generation, ensuring token uniqueness while optimizing computational efficiency on blockchain platforms.</p>
+                    <a id="nft-simplification-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('nft-simplification-details')">Learn More</a>
+                </div>
+                <div id="nft-simplification-details" class="project-details" style="display: none;">
+                    <h3>Simplification of Non-Fungible Tokens Using RNN Algorithm in Blockchain</h3>
+                    <p>This project explored the use of Recurrent Neural Networks (RNN) to simplify and optimize the generation of Non-Fungible Tokens (NFTs) on blockchain platforms. By employing machine learning, it ensured token uniqueness and reduced the computational complexities associated with traditional NFT creation processes.</p>
+                    <h4>Key Features and Functionality:</h4>
+                    <ul>
+                        <li><strong>Token Generation Optimization:</strong> Used RNN models to generate unique token identifiers efficiently.</li>
+                        <li><strong>System Efficiency:</strong> Improved the speed and scalability of NFT generation.</li>
+                        <li><strong>Blockchain Integrity:</strong> Ensured all tokens were securely registered on the blockchain.</li>
+                    </ul>
+                    <h4>Development Process:</h4>
+                    <ul>
+                        <li><strong>Technology Stack:</strong></li>
+                        <ul>
+                            <li><strong>Blockchain Technology:</strong> Integrated NFTs within a secure and decentralized ledger.</li>
+                            <li><strong>RNN Algorithms:</strong> Leveraged recurrent neural networks for pattern recognition and token uniqueness.</li>
+                        </ul>
+                        <li><strong>Implementation:</strong></li>
+                        <ul>
+                            <li>Designed and trained RNN models on datasets to generate unique identifiers.</li>
+                            <li>Integrated these models with a blockchain smart contract to automate NFT creation.</li>
+                            <li>Conducted tests to ensure compliance with blockchain standards and token security.</li>
+                        </ul>
+                    </ul>
+                    <h4>Impact and Outcome:</h4>
+                    <p>The project successfully demonstrated how machine learning could enhance blockchain systems by simplifying the creation and management of NFTs. By reducing complexity and maintaining high security, it provided a scalable solution for modern blockchain applications. The project was recognized for its innovation and potential for real-world use in the NFT space.</p>
+                    <button id="nft-simplification-close" class="close-btn" onclick="toggleDetails('nft-simplification-details')">Close</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- See More Button -->
+        <div class="see-more-container">
+            <button id="projects-see-more-btn" class="btn" onclick="toggleProjects('show')">See More</button>
+            <button id="projects-show-less-btn" class="btn" style="display: none;" onclick="toggleProjects('hide')">Show Less</button>
+        </div>
+
+    </div>
+</div>
+
+
+<!--------------------Portfolio----------------->
+<!--------------------Work Section----------------->
+<div id="work">
+    <div class="container">
+        <h1 class="sub-title">My Experience</h1>
+        <div class="work-list">
+
+            <!-- Work 1 -->
+            <div id="purdue-security">
+                <i class="fa-solid fa-shield"></i>
+                <h2>Purdue Systems Security</h2>
+                <p><strong>Role:</strong> Cybersecurity Awareness Associate</p>
+                <p><strong>From:</strong> September 2024 - Current</p>
+                <a id="purdue-security-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('purdue-security-details')">Learn More</a>
+            </div>
+            
+            <!-- Expanded Details for Purdue Systems Security -->
+            <div id="purdue-security-details" class="work-details" style="display: none;">
+                <h3>Purdue Systems Security</h3>
+                <p>
+                    <strong>Workplace Name:</strong> Purdue Systems Security<br>
+                    <strong>Role:</strong> Web Developer and Cybersecurity Awareness Associate
+                </p>
+                <p>
+                    At Purdue Systems Security, I serve as a Web Developer and Cybersecurity Awareness Associate, a role I’ve held since October 2024. My responsibilities involve a blend of cybersecurity advocacy and web development to enhance awareness and implement cybersecurity best practices across the Purdue community.
+                </p>
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li><strong>Cybersecurity Campaigns:</strong> Organized and executed awareness campaigns, such as workshops, training sessions, and interactive events, aimed at educating students and staff about potential cyber threats and prevention techniques.</li>
+                    <li><strong>Web Development:</strong> Developed and maintained user-friendly web interfaces for cybersecurity tools and informational resources to improve accessibility and engagement.</li>
+                    <li><strong>Content Creation:</strong> Contributed to crafting educational content, including newsletters, articles, and social media updates, to inform the community about emerging cyber trends and threats.</li>
+                    <li><strong>Operational Support:</strong> Managed KnowBe4 self-phishing campaigns and user account administration, ensuring effective use of cybersecurity tools. Assisted with support tickets related to cybersecurity awareness programs.</li>
+                </ul>
+                <p>
+                    This position has enabled me to combine my technical expertise with a passion for promoting cybersecurity awareness, while honing my skills in web development and outreach strategies.
+                </p>
+                <button id="purdue-security-close" class="close-btn" onclick="toggleDetails('purdue-security-details')">Close</button>
+            </div>
+
+            <!-- Work 2 -->
+
+            <div id="cybernaut-tech">
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Cybernaut Edu Tech LLP</h2>
+                <p><strong>Role:</strong> Full Stack Application Developer</p>
+                <p><strong>From:</strong> February 2020 - August 2020 (Intern)</p>
+                <a id="cybernaut-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('cybernaut-details')">Learn More</a>
+            </div>
+            
+            <!-- Expanded Details for Cybernaut Edu Tech LLP -->
+            <div id="cybernaut-details" class="work-details" style="display: none;">
+                <h3>Cybernaut Edu Tech LLP</h3>
+                <p>
+                    <strong>Workplace Name:</strong> Cybernaut Edu Tech LLP<br>
+                    <strong>Role:</strong> Full Stack Application Developer Intern
+                </p>
+                <p>
+                    At Cybernaut Edu Tech LLP, I worked as a Full Stack Application Developer Intern from February 2020 to August 2020, contributing to the development of innovative ed-tech platforms. My role encompassed designing and implementing scalable and responsive web applications that enhanced the user experience for both students and educators.
+                </p>
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li><strong>Front-End Development:</strong> Designed and developed dynamic, responsive user interfaces using React and JavaScript, ensuring seamless user interaction and engagement.</li>
+                    <li><strong>Back-End Development:</strong> Built and integrated scalable backend systems using Node.js, managing data efficiently and enabling real-time updates with Firebase.</li>
+                    <li><strong>Webinars and Mentorship:</strong> Conducted webinars on app development using Android Studio and Java, reaching a broad audience and driving enrollment. My sessions emphasized practical skills, enhancing participants’ confidence in building applications.</li>
+                    <li><strong>Team Collaboration:</strong> Worked closely with cross-functional teams, including UI/UX designers and product managers, to align the platform's functionality with user needs. This collaboration resulted in enhanced design and operational efficiency.</li>
+                </ul>
+                <p>
+                    This experience not only strengthened my technical skills but also allowed me to develop communication and leadership capabilities through mentorship and collaboration. It laid the foundation for my expertise in full-stack development and user-centric design.
+                </p>
+                <button id="cybernaut-close" class="close-btn" onclick="toggleDetails('cybernaut-details')">Close</button>
+            </div>
+
+            <!-- Work 3 -->
+
+            <div id="cybertruck-challenge">
+                <i class="fa-solid fa-unlock"></i>
+                <h2>CyberTruck Challenge</h2>
+                <p><strong>Role:</strong> Participant</p>
+                <p><strong>From:</strong> June 2024</p>
+                <a id="cybertruck-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('cybertruck-details')">Learn More</a>
+            </div>
+            
+            <!-- Expanded Details for CyberTruck Challenge -->
+            <div id="cybertruck-details" class="work-details" style="display: none;">
+                <h3>CyberTruck Challenge</h3>
+                <p>
+                    <strong>Workplace Name:</strong> CyberTruck Challenge<br>
+                    <strong>Role:</strong> Participant in Heavy Vehicle Cybersecurity Challenge
+                </p>
+                <p>
+                    In June 2024, I participated in the CyberTruck Challenge, a hands-on cybersecurity event focused on securing heavy vehicle systems. The challenge brought together professionals, academics, and students to collaborate on identifying and mitigating vulnerabilities in CAN (Controller Area Network) bus systems used in modern trucks.
+                </p>
+                <h4>Key Contributions:</h4>
+                <ul>
+                    <li><strong>Threat Analysis:</strong> Conducted a thorough analysis of CAN bus systems to identify vulnerabilities that could potentially compromise vehicle operations.</li>
+                    <li><strong>Exploiting Vulnerabilities:</strong> Collaborated with team members to simulate attacks, gaining control over the CAN systems. This exercise highlighted critical security gaps in heavy vehicle communication networks.</li>
+                    <li><strong>Developing Mitigation Strategies:</strong> Designed and implemented solutions to protect against identified threats, including encryption methods and intrusion detection systems.</li>
+                    <li><strong>Real-World Testing:</strong> Worked in a real-world simulation environment, allowing for practical testing and validation of the proposed solutions.</li>
+                    <li><strong>Cross-Functional Collaboration:</strong> Engaged with cybersecurity experts, engineers, and peers to share insights and develop innovative approaches to heavy vehicle security.</li>
+                </ul>
+                <p>
+                    This experience provided me with valuable insights into automotive cybersecurity and equipped me with practical skills in securing complex systems. It emphasized the importance of collaboration and problem-solving in addressing real-world cybersecurity challenges.
+                </p>
+                <button id="cybertruck-close" class="close-btn" onclick="toggleDetails('cybertruck-details')">Close</button>
+            </div>
+
+        </div>
+        <!-- See More Button -->
+        <div class="see-more-container">
+            <a href="#" id="experience-see-more-btn" class="btn" onclick="displayExperienceMessage(event)">See more</a>
+        </div>
+
+        <!-- Message Container -->
+        <p id="experience-msg" style="text-align: center; color: #61b752; font-weight: bold; margin-top: 10px;"></p>
+    </div>
+</div>
+
+
+<!--------------------Contact----------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> nikhilprakash.js@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen"></i> +1 (765) 543-5497</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/nikhil-prakash-j-s-1b31771b4/"><i class="fa-brands fa-linkedin"></i></a> <!-----------To add profile urls paste the complete urls inside href----------------->
+                    <a href="https://github.com/nikhil-js-12"><i class="fa-brands fa-github"></i></a> <!--------Suggestions: LinkedIn, Github, Discord--------->
+                    <a href="https://x.com/NIKHILPRAKASHJ1"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Nikhil. Made by Nikhil Js <i class="fa-solid fa-briefcase"></i> </p>
+    </div>
+</div>
+    </body>
+</html>
