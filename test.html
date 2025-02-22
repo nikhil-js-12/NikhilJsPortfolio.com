@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Js Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c22c4533a3.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#addskills">Skills</a></li>
+                        <li><a href="#coursework">Coursework</a></li>
+                        <li><a href="#work">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    
+                </nav>
+                <div class="header-text">
+                    <p>Full Stack Developer</p>
+                    <h1>Hi, I'm <span>Nikhil Js</span> 
+                        <br>From <span class="highlight">Purdue University</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+<!--------------------Projects----------------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="projects-list">
+            <!-- First row of projects -->
+             <!-- Career Path Exploration Bot Project -->
+             <div id="career-path-bot">
+                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                <h2>Career Path Exploration Bot</h2>
+                <p>Developed a bot to guide students in exploring diverse career paths with recommendations for courses, categorized as free or paid. Focused on breaking traditional fields like Engineering or Medicine. Technology stack included Yellow Messenger API and Python.</p>
+            </div>
+
+            <!-- 2nd Project -->
+
+            <div id="hospital-bed-app">
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>Hospital Bed Availability App</h2>
+                <p>The SWELP project was developed to assist hospitals, healthcare providers, and patients by providing real-time updates on hospital bed availability. Leveraging technology, SWELP improved resource allocation and patient care during the COVID-19 crisis.</p>
+            </div>
+
+            <!-- 4th Project -->
+            
+            <div id="vehicle-detection-system">
+                <i class="fa-solid fa-camera"></i>
+                <h2>Vehicle Detection System</h2>
+                <p>Developed a vehicle detection system using Raspberry Pi and Computer Vision to enhance traffic monitoring and security. The system identifies vehicle attributes like type, color, and model in real-time.</p>
+            </div>
+        </div>
+
+        <!-- Hidden rows -->
+        <div id="extra-projects" style="display: none;">
+            <div class="projects-list2">
+                <!-- Second row of projects -->
+
+                <!-- 5th Project -->
+            <!-- Career Path Exploration Bot Project -->
+            <div id="career-path-bot">
+                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                <h2>Career Path Exploration Bot</h2>
+                <p>Developed a bot to guide students in exploring diverse career paths with recommendations for courses, categorized as free or paid. Focused on breaking traditional fields like Engineering or Medicine. Technology stack included Yellow Messenger API and Python.</p>
+            </div>
+
+            <!-- 2nd Project -->
+
+            <div id="hospital-bed-app">
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>Hospital Bed Availability App</h2>
+                <p>The SWELP project was developed to assist hospitals, healthcare providers, and patients by providing real-time updates on hospital bed availability. Leveraging technology, SWELP improved resource allocation and patient care during the COVID-19 crisis.</p>
+            </div>
+
+            <!-- 4th Project -->
+
+            <div id="vehicle-detection-system">
+                <i class="fa-solid fa-camera"></i>
+                <h2>Vehicle Detection System</h2>
+                <p>Developed a vehicle detection system using Raspberry Pi and Computer Vision to enhance traffic monitoring and security. The system identifies vehicle attributes like type, color, and model in real-time.</p>
+            </div>
+
+                             
+            </div>
+            <div class="projects-list3">
+                <!-- Third row of projects -->
+            <!-- Career Path Exploration Bot Project -->
+            <div id="career-path-bot">
+                <i class="fa-solid fa-hexagon-nodes-bolt"></i>
+                <h2>Career Path Exploration Bot</h2>
+                <p>Developed a bot to guide students in exploring diverse career paths with recommendations for courses, categorized as free or paid. Focused on breaking traditional fields like Engineering or Medicine. Technology stack included Yellow Messenger API and Python.</p>
+            </div>
+
+            <!-- 2nd Project -->
+
+            <div id="hospital-bed-app">
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>Hospital Bed Availability App</h2>
+                <p>The SWELP project was developed to assist hospitals, healthcare providers, and patients by providing real-time updates on hospital bed availability. Leveraging technology, SWELP improved resource allocation and patient care during the COVID-19 crisis.</p>
+            </div>
+
+            <!-- 4th Project -->
+
+            <div id="vehicle-detection-system">
+                <i class="fa-solid fa-camera"></i>
+                <h2>Vehicle Detection System</h2>
+                <p>Developed a vehicle detection system using Raspberry Pi and Computer Vision to enhance traffic monitoring and security. The system identifies vehicle attributes like type, color, and model in real-time.</p>
+            </div>
+        </div>
+        </div>
+
+        <!-- See More Button -->
+        <div class="see-more-container">
+            <button id="projects-see-more-btn" class="btn" onclick="toggleProjects('show')">See More</button>
+            <button id="projects-show-less-btn" class="btn" style="display: none;" onclick="toggleProjects('hide')">Show Less</button>
+        </div>
+
+    </div>
+</div>
+
+    </body>
+</html>
