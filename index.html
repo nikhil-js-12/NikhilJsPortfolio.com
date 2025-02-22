@@ -18,6 +18,8 @@
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
+                        <li><a href="#addskills">Skills</a></li>
+                        <li><a href="#coursework">Coursework</a></li>
                         <li><a href="#work">Experience</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
@@ -54,24 +56,33 @@
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
+
                 </div>
 
                 <!-- Skills Section -->
                 <div class="tab-contents active-tab" id="skills">
                     <h3>Technical Skills</h3>
                     <ul id="technical-skills">
-                        <li><strong>Programming Languages:</strong> Python, JavaScript, Java, React, C++, Node.js, SQL.</li>
+                        <li><strong>Programming:</strong> Python, JavaScript, Java, C, C++, Node.js, SQL, Bash/Shell Scripting, PowerShell, Kotlin</li>
                         <li><strong>Web Development:</strong>
                             <ul>
-                                <li>Front-End: React, HTML, CSS, JavaScript.</li>
-                                <li>Back-End: Node.js, Firebase.</li>
+                                <li>Front-End: HTML, CSS, JavaScript</li>
+                                <li>Back-End: Node.js, Firebase, MongoDB, MySQL, Microsoft SQL Server</li>
                             </ul>
                         </li>
                         <li><strong>Cybersecurity:</strong>
                             <ul>
-                                <li>Network Security: CAN Bus Analysis, Intrusion Detection, Encryption (AES, HMAC).</li>
-                                <li>Tools: Ghidra, Wireshark, OpenSSL, Gcrypt, KnowBe4.</li>
-                                <li>Security Practices: Phishing campaign management, secure file encryption/decryption.</li>
+                                <li>Network Security: CAN Bus Analysis, Intrusion Detection, Encryption (AES, HMAC)</li>
+                                <li>Security Tools: Ghidra, Wireshark, OpenSSL, Gcrypt, KnowBe4, Nmap, Metasploit</li>
+                                <li>Security Practices: Phishing campaign management, penetration testing, secure file</li>
+                            </ul>
+                        </li>
+                        <li><strong>AI & Machine Learning:</strong>
+                            <ul>
+                                <li>Machine Learning Frameworks: Keras, TensorFlow, PyTorch, Scikit-Learn</li>
+                                <li>Big Data & Analytics: Apache Spark, Data Processing Pipelines</li>
+                                <li>Data Visualization: Seaborn, Matplotlib, Plotly</li>
+                                <li>Security AI: Implementing ML-based security techniques for intrusion detection & threat modeling</li>
                             </ul>
                         </li>
                     </ul>
@@ -81,22 +92,25 @@
 
                     <!-- Additional Skills Section (Initially Hidden) -->
                     <div id="additional-skills" style="display: none;">
-                        <h3>Soft Skills</h3>
-                        <ul>
-                            <li><strong>Team Collaboration:</strong> Cross-functional teamwork with designers, managers, and cybersecurity professionals.</li>
-                            <li><strong>Mentorship and Training:</strong> Conducting webinars and mentoring sessions for app development.</li>
-                            <li><strong>Problem-Solving:</strong> Identifying vulnerabilities in systems and implementing mitigation strategies.</li>
-                            <li><strong>Communication:</strong> Creating educational content (newsletters, articles, and presentations).</li>
-                            <li><strong>Project Management:</strong> Planning campaigns, tracking project timelines, and ensuring deliverables.</li>
-                        </ul>
-
                         <h3>Domain-Specific Skills</h3>
                         <ul>
-                            <li><strong>Cybersecurity Awareness:</strong> Promoting best practices and running educational campaigns.</li>
-                            <li><strong>Heavy Vehicle Security:</strong> CAN bus analysis, vulnerability exploitation, and mitigation in automotive systems.</li>
-                            <li><strong>Full-Stack Development:</strong> Building scalable and responsive applications.</li>
+                            <li><strong>Cybersecurity Awareness:</strong> Promoting security best practices & executing large-scale security awareness initiatives</li>
+                            <li><strong>Heavy Vehicle Security:</strong> CAN bus analysis, vulnerability exploitation, and mitigation for automotive systems</li>
+                            <li><strong>Full-Stack Development:</strong> Building scalable, responsive, and secure applications</li>
+                            <li><strong>AI & Machine Learning Security:</strong> Implementing ML-based security measures using Keras, TensorFlow, PyTorch</li>
+                            <li><strong>Graphical & UI/UX Design:</strong> Experience in Graphical Design, UI/UX Principles, and Application Aesthetics</li>
+                            <li><strong>Game Development & AI-based Interactive Systems:</strong> Expertise in game mechanics, AI-driven gameplay, and software development</li>
+                            <li><strong>Ethical Hacking & Security Research:</strong> Hands-on experience with penetration testing, security audits, and exploit analysis</li>
+                            <li><strong>Application & Full-Stack Development:</strong> Strong foundation in app design, API integrations, and cloud-based architectures</li>
                         </ul>
 
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li><strong>Team Collaboration:</strong> Cross-functional teamwork with developers, designers, and cybersecurity professional</li>
+                            <li><strong>Mentorship and Training:</strong> Conducting webinars, technical mentoring, and knowledge-sharing sessions</li>
+                            <li><strong>Problem-Solving:</strong> Identifying vulnerabilities in systems and implementing mitigation strategies</li>
+                            <li><strong>Project Management:</strong> Leading security awareness campaigns, tracking project timelines, and ensuring deliverables</li>
+                        </ul>
                         <!-- Show Less Button -->
                         <button id="show-less-btn" onclick="toggleSkills(false)">Show Less</button>
                     </div>
@@ -106,7 +120,7 @@
                 <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>Purdue Systems Security</span><br>Currently working since October 2024 as a <span>Web Developer and Cybersecurity Awareness Associate</span>. Focuses on promoting <br>cybersecurity best practices, planning awareness campaigns, and developing web interfaces for cybersecurity tools.</li>
-                        <li><span>Cynernaut Edu Tech</span><br>Worked from February 2020 to August 2020 as a <span>Full Stack Application Developer</span>. Enhanced the user experience for ed-tech <br>platforms by developing responsive front-end and scalable back-end systems using modern technologies.</li>
+                        <li><span>Cybernaut Edu Tech</span><br>Worked from February 2020 to August 2020 as a <span>Full Stack Application Developer</span>. Enhanced the user experience for ed-tech <br>platforms by developing responsive front-end and scalable back-end systems using modern technologies.</li>
                         <li><span>CyberTruck Challenge</span><br>Participated in June 2024 as part of a cybersecurity challenge. Collaborated with experts to analyze CAN bus systems, <br>identify vulnerabilities, and implement solutions for heavy vehicle cybersecurity.</li>
                     </ul>
                 </div>
@@ -542,8 +556,240 @@
     </div>
 </div>
 
+<!--------------------Skills----------------->
+<div id="addskills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+            <!-- First row of skills (Always Visible) -->
+            <div class="skill-category">
+                <i class="fa-solid fa-code"></i>
+                <h2>Programming & Development</h2>
+                <p><strong>Languages:</strong> Python, JavaScript, Java, C, C++, Kotlin, SQL, Bash, PowerShell</p>
+                <p><strong>Front-End:</strong> React, HTML, CSS, JavaScript</p>
+                <p><strong>Back-End:</strong> Node.js, Firebase, MongoDB, MySQL, Microsoft SQL Server</p>
+                <p><strong>APIs:</strong> Postman, GraphQL, RESTful APIs</p>
+            </div>
 
-<!--------------------Portfolio----------------->
+            <div class="skill-category">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2>Cybersecurity & Network Security</h2>
+                <p><strong>Network Security:</strong> CAN Bus Analysis, Intrusion Detection, Encryption (AES, HMAC)</p>
+                <p><strong>Penetration Testing:</strong> Metasploit, Burp Suite, Nmap, Wireshark, Tcpdump</p>
+                <p><strong>Reverse Engineering:</strong> Ghidra, Binary Ninja, IDA Pro</p>
+                <p><strong>Security Tools:</strong> OpenSSL, Gcrypt, KnowBe4</p>
+            </div>
+
+            <div class="skill-category">
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Cloud Computing & DevOps</h2>
+                <p><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud</p>
+                <p><strong>Containerization:</strong> Docker, Kubernetes</p>
+                <p><strong>Infrastructure as Code:</strong> Terraform, Ansible</p>
+                <p><strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI/CD</p>
+            </div>
+        </div>
+
+        <!-- Hidden rows of skills -->
+        <div id="extra-skills" style="display: none;">
+            <div class="skills-list">
+                <!-- Second row of skills -->
+                <div class="skill-category">
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>AI/ML & Data Science</h2>
+                    <p><strong>ML Frameworks:</strong> Keras, TensorFlow, PyTorch, Scikit-Learn</p>
+                    <p><strong>Big Data:</strong> Apache Spark</p>
+                    <p><strong>Data Visualization:</strong> Seaborn, Matplotlib, Plotly</p>
+                    <p><strong>AI Security:</strong> Adversarial AI, ML-driven security solutions</p>
+                </div>
+
+                <div class="skill-category">
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>Graphical & UI/UX Design</h2>
+                    <p><strong>UI/UX Design:</strong> Responsive & interactive front-end applications</p>
+                    <p><strong>Design Tools:</strong> Figma, Adobe XD, Canva</p>
+                    <p><strong>User Research:</strong> Optimizing usability & accessibility</p>
+                </div>
+
+                <div class="skill-category">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game Development & AI</h2>
+                    <p><strong>Game Mechanics:</strong> AI-driven interactive gameplay</p>
+                    <p><strong>Engines:</strong> Unity (C#), Unreal Engine</p>
+                    <p><strong>AI in Games:</strong> Decision-making & gameplay automation</p>
+                </div>
+            </div>
+
+            <div class="skills-list">
+                <!-- Third row of skills -->
+                <div class="skill-category">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Full-Stack & Application Development</h2>
+                    <p><strong>Front-End:</strong> HTML, CSS, JavaScript, React</p>
+                    <p><strong>Back-End:</strong> Node.js, Firebase, MongoDB, GraphQL</p>
+                    <p><strong>Security:</strong> Authentication & encryption in apps</p>
+                </div>
+
+                <div class="skill-category">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h2>Version Control & Collaboration</h2>
+                    <p><strong>VCS:</strong> Git, GitHub, GitLab</p>
+                    <p><strong>IDEs:</strong> VS Code, IntelliJ, PyCharm</p>
+                    <p><strong>Project Management:</strong> Jira, Confluence, Notion</p>
+                </div>
+
+                <!-- Certifications -->
+                <div class="skill-category">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h2>Certifications</h2>
+                    <p>Graphical & UI/UX Design</p>
+                    <p>Game Development</p>
+                    <p>Artificial Intelligence & Machine Learning</p>
+                    <p>Full-Stack Application Development</p>
+                    <p>Full-Stack Web Development, Ethical Hacking</p>
+                    <p>Ethical Hacking</p>
+                    <p>Python Programming</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- See More Button -->
+        <div class="see-more-container">
+            <button id="add-skills-see-more-btn" class="btn" onclick="toggleAddSkills('show')">See More</button>
+            <button id="add-skills-show-less-btn" class="btn" style="display: none;" onclick="toggleAddSkills('hide')">Show Less</button>
+        </div>        
+    </div>
+</div>
+
+<!-------------------- Coursework ----------------->
+<div id="coursework">
+    <div class="container">
+        <h1 class="sub-title">My Coursework</h1>
+        <div class="coursework-list">
+
+            <!-- Masters: Purdue University -->
+            <div id="purdue-university">
+                <i class="fa-solid fa-building-columns"></i>
+                <h2>Purdue University</h2>
+                <p><strong>Degree:</strong> Master of Science in Computer Science</p>
+                <p>August 2023 - May 2025</p>
+                <a id="purdue-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('purdue-details')">Learn More</a>
+            </div>
+
+            <!-- Purdue Coursework Details -->
+            <div id="purdue-details" class="coursework-details" style="display: none;">
+                <h3>Coursework at Purdue University</h3>
+
+                <!-- Software Courses Container -->
+                <div class="sub-container">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h4>Software Courses</h4>
+                    <button onclick="toggleSubContainer('purdue-software-courses')">View Courses</button>
+                    <div id="purdue-software-courses" class="course-list" style="display: none;">
+                        <ul>
+                            <li>Foundational Principles of Information Security</li>
+                            <li>Introduction to Systems</li>
+                            <li>Information Security</li>
+                            <li>Cryptography</li>
+                            <li>Software Security</li>
+                            <li>Security Analytics</li>
+                            <li>Database Management Systems</li>
+                            <li>Data Communication & Networks</li>
+                            <li>Social, Economic, And Legal Aspects Of Security</li>
+                            <li>Network Security</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Close Button -->
+                <button class="close-btn" onclick="toggleDetails('purdue-details')">Close</button>
+            </div>
+
+            <!-- SRM University -->
+            <div id="srm-university">
+                <i class="fa-solid fa-building-columns"></i>
+                <h2>SRM Institute of Science & Technology</h2>
+                <p><strong>Degree:</strong> Bachelor of Technology in Computer Science & Engineering</p>
+                <p>June 2019 - May 2023</p>
+                <a id="srm-learn-more" class="learn-more-btn" href="javascript:void(0)" onclick="toggleDetails('srm-details')">Learn More</a>
+            </div>
+
+            <!-- Expanded Details for SRM Coursework -->
+            <div id="srm-details" class="coursework-details" style="display: none;">
+                <h3>Coursework at SRM Institute of Science & Technology</h3>
+
+                <!-- Software Courses Container -->
+                <div class="sub-container">
+                    <i class="fa-brands fa-uncharted"></i>
+                    <h4>Software Courses</h4>
+                    <button onclick="toggleSubContainer('software-courses')">View Courses</button>
+                    <div id="software-courses" class="course-list" style="display: none;">
+                        <ul>
+                            <li>Programming for Problem Solving</li>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Object-Oriented Design & Programming</li>
+                            <li>Design & Analysis of Algorithms</li>
+                            <li>Operating Systems</li>
+                            <li>Software Engineering & Project Management</li>
+                            <li>Advanced Programming Practice</li>
+                            <li>Computer Communications</li>
+                            <li>Discrete Mathematics for Engineers</li>
+                            <li>Formal Language & Automata</li>
+                            <li>Computer Networks</li>
+                            <li>Data Mining & Analytics</li>
+                            <li>Information Storage & Management</li>
+                            <li>Database Management Systems</li>
+                            <li>Compiler Design</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Network Security</li>
+                            <li>Database Security & Privacy</li>
+                            <li>Semantic Web</li>
+                            <li>Final Project</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hardware Courses Container -->
+                <div class="sub-container">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h4>Hardware Courses</h4>
+                    <button onclick="toggleSubContainer('hardware-courses')">View Courses</button>
+                    <div id="hardware-courses" class="course-list" style="display: none;">
+                        <ul>
+                            <li>Semiconductor Physics</li>
+                            <li>Basic Electrical and Electronics Engineering</li>
+                            <li>Analog and Digital Engineering</li>
+                            <li>Computer Organization & Architecture</li>
+                            <li>Sensors & Transducers</li>
+                            <li>Fiber Electronics & Optoelectronics</li>
+                            <li>Wireless Sensor Networks</li>
+                            <li>Short Range Wireless Communications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Extra Activities Container -->
+                <div class="sub-container">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h4>Extra Activities</h4>
+                    <button onclick="toggleSubContainer('extra-activities')">View Activities</button>
+                    <div id="extra-activities" class="course-list" style="display: none;">
+                        <ul>
+                            <li>Cybersecurity Awareness Initiatives</li>
+                            <li>Hackathons & Technical Competitions</li>
+                            <li>Seminars & Workshops on Emerging Tech Trends</li>
+                            <li>Professional Development & Soft Skills Training</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Close Button -->
+                <button class="close-btn" onclick="toggleDetails('srm-details')">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--------------------Work Section----------------->
 <div id="work">
     <div class="container">
@@ -652,7 +898,7 @@
         </div>
         <!-- See More Button -->
         <div class="see-more-container">
-            <a href="#" id="experience-see-more-btn" class="btn" onclick="displayExperienceMessage(event)">See more</a>
+            <a href="#" id="experience-see-more-btn" class="btn" onclick="displayExperienceMessage(event)">See More</a>
         </div>
 
         <!-- Message Container -->
