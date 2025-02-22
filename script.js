@@ -26,22 +26,44 @@ function closemenu() {
 }
 
 // Google Sheets form submission
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwGsO6-5_-iepgehW6LuevPQqZb9TQ8kvfzJDwbBDAKS9GzL83UzBut-JR15Hdw--F_6w/exec';
-const form = document.forms['submit-to-google-sheet'];
-const msg = document.getElementById("msg");
+document.addEventListener("DOMContentLoaded", function () {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwGsO6-5_-iepgehW6LuevPQqZb9TQ8kvfzJDwbBDAKS9GzL83UzBut-JR15Hdw--F_6w/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            msg.innerHTML = "Message has been successfully sent!";
-            setTimeout(function () {
-                msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form)
+            })
+            .then(response => response.text()) // Convert response to text to check
+            .then(data => {
+                console.log("Success:", data);
+                msg.innerHTML = "Message has been successfully sent! I will get back to you soon!";
+                msg.style.display = "block"; // Ensure it is visible
+                setTimeout(function () {
+                    msg.innerHTML = "";
+                    msg.style.display = "none"; // Hide after 5 sec
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                msg.innerHTML = "Error submitting the form. Please try again!";
+                msg.style.display = "block";
+                msg.style.color = "red"; // Change to red for errors
+                setTimeout(() => {
+                    msg.innerHTML = "";
+                    msg.style.display = "none";
+                }, 5000);
+            });
+        });
+    }
 });
+
 
 // Projects section toggle functionality
 function toggleProjects(action) {
@@ -93,3 +115,76 @@ function toggleDetails(detailId) {
         detailElement.style.display = "none"; // Hide the details
     }
 }
+
+// Toggle Additional Skills inside "My Skills" Section
+function toggleAddSkills(action) {
+    const extraSkills = document.getElementById("extra-skills");
+    const seeMoreBtn = document.getElementById("add-skills-see-more-btn");
+    const showLessBtn = document.getElementById("add-skills-show-less-btn");
+
+    if (action === "show") {
+        extraSkills.style.display = "grid"; 
+        seeMoreBtn.style.display = "none"; 
+        showLessBtn.style.display = "inline-block"; 
+    } else {
+        extraSkills.style.display = "none"; 
+        seeMoreBtn.style.display = "inline-block"; 
+        showLessBtn.style.display = "none"; 
+    }
+}
+
+/** Ensure Buttons Work After Page Load **/
+document.addEventListener("DOMContentLoaded", function () {
+    const showMoreSkillsBtn = document.getElementById("show-more-btn");
+    const showLessSkillsBtn = document.getElementById("show-less-btn");
+    const addSkillsSeeMoreBtn = document.getElementById("add-skills-see-more-btn");
+    const addSkillsShowLessBtn = document.getElementById("add-skills-show-less-btn");
+
+    if (showMoreSkillsBtn) {
+        showMoreSkillsBtn.addEventListener("click", function () {
+            toggleSkills(true);
+        });
+    }
+
+    if (showLessSkillsBtn) {
+        showLessSkillsBtn.addEventListener("click", function () {
+            toggleSkills(false);
+        });
+    }
+
+    if (addSkillsSeeMoreBtn) {
+        addSkillsSeeMoreBtn.addEventListener("click", function () {
+            toggleAddSkills("show");
+        });
+    }
+
+    if (addSkillsShowLessBtn) {
+        addSkillsShowLessBtn.addEventListener("click", function () {
+            toggleAddSkills("hide");
+        });
+    }
+});
+
+/** --------------------------- COURSEWORK SECTION --------------------------- */
+// Toggle details for coursework
+function toggleDetails(detailId) {
+    const detailElement = document.getElementById(detailId);
+    if (detailElement.style.display === "none" || detailElement.style.display === "") {
+        detailElement.style.display = "block"; // Show the details
+    } else {
+        detailElement.style.display = "none"; // Hide the details
+    }
+}
+
+// Toggle sub-containers within coursework details
+function toggleSubContainer(subContainerId) {
+    const subContainer = document.getElementById(subContainerId);
+    if (subContainer.style.display === "none" || subContainer.style.display === "") {
+        subContainer.style.display = "block"; // Show the sub-container
+    } else {
+        subContainer.style.display = "none"; // Hide the sub-container
+    }
+}
+
+
+
