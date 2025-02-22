@@ -104,6 +104,14 @@ nav ul li a:hover::after{
     color: #fff;
 }
 
+.sub-heading {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #fff; 
+    margin-top: 10px; 
+}
+
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
@@ -657,11 +665,22 @@ nav .fa-solid{
         font-size: 15px;
     }
 }
-#msg{
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
+#msg {
+    display: none;
+    text-align: center;
+    color: #61b752; 
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(97, 183, 82, 0.2); 
+    border: 2px solid #61b752;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 /* -----------Newly added----------*/
 /* See More button styling for Projects Section*/
 .see-more-container {
@@ -770,3 +789,279 @@ nav .fa-solid{
     gap: 15px; /* Adds spacing between View Publication and Close */
     margin-top: 20px; /* Consistent spacing */
 }
+
+/* Coursework Section */
+#coursework {
+    padding: 50px 0;
+}
+
+.coursework-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+
+.coursework-list div {
+    background: #262626;
+    padding: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: left;
+}
+
+.coursework-list div i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.coursework-list div h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.coursework-list div p {
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.coursework-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+    border: 1px solid #ff004f;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.coursework-list div:hover {
+    background: #b54769;
+    transform: translateY(-5px);
+}
+
+/* Coursework Details */
+.coursework-details {
+    background: #1c1c1c;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.coursework-details h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff004f;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Sub-Container Styling */
+.coursework-details .sub-container {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.coursework-details .sub-container h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* View Courses Button */
+.coursework-details .sub-container button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 20px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #ff004f;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.coursework-details .sub-container button:hover {
+    background: #ff004f;
+}
+
+/* Course List Styling */
+.course-list {
+    display: none;
+    background: #222;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.course-list ul {
+    padding-left: 20px;
+}
+
+.course-list ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+/* Close Button */
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #262626;
+    color: #fff;
+    border: 1px solid #ff004f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+}
+
+.close-btn:hover {
+    background-color: #ff004f;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .coursework-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .coursework-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -----------Skills Section--------------*/
+#skills {
+    padding: 30px 0;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.skills-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Skills Grid Layout */
+.skills-list, .skills-list2, .skills-list3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px; /* Ensures uniform spacing between all skill rows */
+    margin-top: 50px;
+}
+
+/* Individual Skill Card */
+.skills-list div, .skills-list2 div, .skills-list3 div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: left;
+}
+
+/* Icons Styling */
+.skills-list div i, .skills-list2 div i, .skills-list3 div i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Skill Titles */
+.skills-list div h2, .skills-list2 div h2, .skills-list3 div h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Skill Description */
+.skills-list div p, .skills-list2 div p, .skills-list3 div p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.skills-list div:hover, .skills-list2 div:hover, .skills-list3 div:hover {
+    background: #b54769;
+    transform: translateY(-10px);
+}
+
+/* Initially Hidden Skills */
+#extra-skills {
+    display: none;
+    margin-top: 20px;
+}
+
+/* See More Button */
+.see-more-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#add-skills-see-more-btn, #add-skills-show-less-btn {
+    display: inline-block;
+    margin: 20px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+#add-skills-see-more-btn:hover, #add-skills-show-less-btn:hover {
+    background: #ff004f;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .skills-list, .skills-list2, .skills-list3 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-list, .skills-list2, .skills-list3 {
+        grid-template-columns: 1fr; /* 1 column per row for mobile */
+    }
+}
+
+
+
+
+
+
+
