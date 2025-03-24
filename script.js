@@ -185,6 +185,21 @@ function toggleSubContainer(subContainerId) {
         subContainer.style.display = "none"; // Hide the sub-container
     }
 }
+// Toggle CV Options Dropdown
+function toggleCVOptions() {
+    const cvOptions = document.getElementById("cv-options");
+    cvOptions.style.display = (cvOptions.style.display === "flex") ? "none" : "flex";
+
+    // Optional: Close dropdown on outside click
+    document.addEventListener("click", function outsideClickListener(e) {
+        if (!cvOptions.contains(e.target) && e.target.id !== "cv-toggle-btn") {
+            cvOptions.style.display = "none";
+            document.removeEventListener("click", outsideClickListener);
+        }
+    });
+}
+
+
 
 
 

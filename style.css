@@ -1059,6 +1059,51 @@ nav .fa-solid{
     }
 }
 
+/* CV Dropdown Styling */
+.cv-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cv-options {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #ff0051;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    animation: fadeSlideDown 0.3s ease-in-out forwards;
+}
+
+.cv-link {
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.cv-link:hover {
+    background-color: #e60045;
+}
+
+/* Animation */
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 
 
